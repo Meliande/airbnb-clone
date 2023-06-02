@@ -1,15 +1,16 @@
 "use client";
 
-import { AiOutlineMenu } from "react-icons/ai"
-import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
-import MenuItem from "./MenuItem";
-import useRegisterModal from "@/app/hooks/useRegisterModal";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import { AiOutlineMenu } from "react-icons/ai"
+import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { SafeUser } from "@/app/types";
+
+import Avatar from "../Avatar";
+import MenuItem from "./MenuItem";
 import useRentModal from "@/app/hooks/useRentModal";
-import { useRouter } from "next/navigation";
+import useLoginModal from "@/app/hooks/useLoginModal";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 interface UserMenuProps {
     currentUser?: SafeUser | null
@@ -60,7 +61,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                 </div>
             </div>
             { isOpen && (
-                <div className="absolute rounded-xl shadow-md w-[40px] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
+                <div className="absolute rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
                     <div className="flex flex-col cursor-pointer">
                         {currentUser ? (
                             <>

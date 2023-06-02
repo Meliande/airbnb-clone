@@ -1,6 +1,5 @@
 "use client";
 
-import { title } from "process";
 import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io"
 import Button from "../Button";
@@ -88,7 +87,6 @@ const Modal: React.FC<ModalProps> = ({
                     lg:h-auto
                     md:h-auto"
                 >
-                    {/*contet*/}
                     <div 
                         className=
                             {`translate 
@@ -115,7 +113,6 @@ const Modal: React.FC<ModalProps> = ({
                                 outline-none
                                 focus:outline-none"
                         >
-                            {/*Header*/}
                             <div
                                 className="
                                     flex
@@ -142,11 +139,9 @@ const Modal: React.FC<ModalProps> = ({
                                     {title}
                                 </div>
                             </div>
-                            {/*Body*/}
                             <div className="relative p-6 flex-auto">
                                 {body}
                             </div>
-                            {/*footer*/}
                             <div className="flex flex-col gap-2 p-6">
                                 <div className="flex flex-row items-center gap-4 w-ful">
                                     {
